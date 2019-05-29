@@ -1,5 +1,9 @@
 Manifest-Version: 1.0
+<<<<<<< HEAD
+Built-By: Park
+=======
 Built-By: 18
+>>>>>>> 6f27253259df27534462fa836e2d1a65cb375399
 Build-Jdk: 1.8.0_191
 Created-By: Maven Integration for Eclipse
 
