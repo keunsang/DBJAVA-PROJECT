@@ -1,13 +1,5 @@
 Manifest-Version: 1.0
-<<<<<<< HEAD
 Built-By: KEUNSANG
-=======
-<<<<<<< HEAD
-Built-By: Park
-=======
-Built-By: 12
->>>>>>> 8f951909dffc25694360b6e6ad8ec068572a953e
->>>>>>> bda300bcb4253a3715603b02862ad539e701fda7
 Build-Jdk: 1.8.0_191
 Created-By: Maven Integration for Eclipse
 

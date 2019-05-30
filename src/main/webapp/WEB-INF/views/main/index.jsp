@@ -24,7 +24,7 @@
 				<span class="base_s">목적지</span>
 			</div>
 			<div>
-				<input type="text" id="destination_input" value="">
+				<input type="text" id="destination_input" class="d_input" value="">
 			</div>
 		</div>
 		<div>
@@ -32,7 +32,16 @@
 				<span class="base_s">체크인-체크아웃</span>
 			</div>
 			<div>
-				<input type="text" id=checkin_input value="" readonly="readonly">
+				<input type="text" id="checkin_input" class="c_input" value="" readonly="readonly">-
+				<input type="text" id="checkout_input" class="c_input" value="" readonly="readonly">
+			</div>
+		</div>
+		<div>
+			<div>
+				<span class="base_s">인원</span>
+			</div>
+			<div>
+				<input type="text" id="person_input" class="p_input" value="" readonly="readonly">
 			</div>
 		</div>
 	</div>
@@ -44,7 +53,12 @@
 
 <script type="text/javascript">
 	$(function() {
-		$("#checkin_input").datepicker();
+		$(".check_input").datepicker({
+/* 	         changeMonth: true, 
+	         changeYear: true,
+	         nextText: '다음 달',
+	         prevText: '이전 달'  */
+		});
 		
 		var availableCity = [ "서울", "부산", "대구", "광주", "울산", "인천", "충청남도",
 				"충청북도", "경상남도", "경상북도" ];
