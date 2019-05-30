@@ -1,19 +1,5 @@
 Manifest-Version: 1.0
-<<<<<<< HEAD
-Built-By: KIMYISEUL
-Build-Jdk: 1.8.0_201
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-Built-By: KIMYISEUL
-Build-Jdk: 1.8.0_201
-=======
-<<<<<<< HEAD
->>>>>>> e8b5178a320ce5d1cf28ef2d9d91b35dad75fcb3
-Built-By: 20
+Built-By: 12
 Build-Jdk: 1.8.0_191
->>>>>>> 37ec1fc044f5d2b205ca018d9a2291c33e92dac6
->>>>>>> a4b5bdb9c967f664d8833bc155ae59ff820ef431
 Created-By: Maven Integration for Eclipse
 
