@@ -5,7 +5,7 @@
 <mapper namespace="com.zip.dbjava.member.dao.MemberMyPageMessageDao">
 	
 	<select id="mMsgNoticDetail" parameterType="String" resultType="message">
-			SELECT * FROM ME WHERE ME_R_MID=#{id}
+			SELECT * FROM ME WHERE ME_R_MID=#{me_r_id}
 		</select>
 
 </mapper>

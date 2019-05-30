@@ -3,6 +3,7 @@ package com.zip.dbjava.main.controller;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,7 +18,7 @@ import com.zip.dbjava.member.bean.Message;
 @RestController
 //@RequestMapping(value = "/ajax")
 public class MainAjaxController {
-
+		@Autowired
 		MainManagement main;
 		
 		ModelAndView mav;

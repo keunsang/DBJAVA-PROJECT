@@ -14,7 +14,7 @@ import com.zip.dbjava.member.dao.MemberMyPageMessageDao;
 @Component
 public class MainManagement {
 	
-	@Autowired
+	
 	private MemberMyPageMessageDao mMsgDao;
 	@Autowired
 	private HttpSession session; 

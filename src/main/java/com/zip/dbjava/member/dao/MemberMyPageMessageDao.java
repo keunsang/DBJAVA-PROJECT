@@ -6,7 +6,7 @@ import com.zip.dbjava.member.bean.Message;
 
 public interface MemberMyPageMessageDao {
 
-	public List<Message> mMsgNoticDetail(String id);
+	public List<Message> mMsgNoticDetail(String me_r_id);
 	
 	
 	
