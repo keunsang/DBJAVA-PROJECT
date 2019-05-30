@@ -1,20 +1,5 @@
 Manifest-Version: 1.0
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 Built-By: 20
-=======
-=======
-Built-By: KEUNSANG
-=======
-<<<<<<< HEAD
->>>>>>> cce50241d7af00ce06716617234da61cfd2d57a3
-Built-By: Park
->>>>>>> bda300bcb4253a3715603b02862ad539e701fda7
-=======
-Built-By: 12
->>>>>>> 8f951909dffc25694360b6e6ad8ec068572a953e
->>>>>>> bda300bcb4253a3715603b02862ad539e701fda7
 Build-Jdk: 1.8.0_191
 Created-By: Maven Integration for Eclipse
 
