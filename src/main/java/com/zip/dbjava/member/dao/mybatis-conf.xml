@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<typeAliases>
+		<!-- <typeAlias type="com.board.kim.bean.Member" alias="member"/> 알리어스는 
+			소문자 시작 <typeAlias type="com.board.kim.bean.Board" alias="board"/> -->
+		<package name="com.zip.dbjava.member.dao" />
+	</typeAliases>
+</configuration>
