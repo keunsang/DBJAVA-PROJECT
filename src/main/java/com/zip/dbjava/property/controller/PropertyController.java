@@ -19,6 +19,12 @@ public class PropertyController {
 	private PropertyMM pmm;
 	ModelAndView mav;
 	
+	@RequestMapping(value = "/addProperty", method = RequestMethod.GET)
+	public String addProperty() {
+		
+		return "property/addProperty";
+	}
+	
 	@RequestMapping(value = "/propertyEnroll", method = RequestMethod.POST)
 	public ModelAndView propertyEnroll(Property p) {
 		System.out.println("id: "+p.getP_mid());
