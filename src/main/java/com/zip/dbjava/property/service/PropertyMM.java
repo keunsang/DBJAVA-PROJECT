@@ -1,9 +1,5 @@
 package com.zip.dbjava.property.service;
 
-import java.util.List;
-
-import javax.servlet.http.HttpSession;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -14,8 +10,6 @@ public class PropertyMM {
 	
 	@Autowired
 	private PropertyDao pDao;
-	@Autowired
-	private HttpSession session;
 	
 	ModelAndView mav;
 
