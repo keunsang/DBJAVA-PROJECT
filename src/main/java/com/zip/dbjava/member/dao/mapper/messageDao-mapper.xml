@@ -8,12 +8,4 @@
 			SELECT * FROM ME WHERE ME_R_MID=#{id}
 		</select>
 
-
-
-
-
-
-
-
-
 </mapper>
