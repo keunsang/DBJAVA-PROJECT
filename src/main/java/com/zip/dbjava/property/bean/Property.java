@@ -1,7 +1,10 @@
 package com.zip.dbjava.property.bean;
 
+import org.apache.ibatis.type.Alias;
+
 import lombok.Data;
 
+@Alias("property")
 @Data
 public class Property {
 	String p_code;

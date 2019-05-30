@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 선언문 -->
+<mapper namespace="com.zip.dbjava.property.dao.PropertyDao">
+
+	<insert id="propertyEnroll" parameterType="Property">
+		INSERT INTO P VALUES (P||SEQ_P.NEXTVAL, #{p_mid}, #{p_type}, #{p_maxguest}, #{p_bedroom}, #{p_bed},
+							#{p_bathroom}, #{p_location}, #{p_convenient}, #{p_safety}, #{p_usedspace},
+							#{p_description}, #{p_name}, #{p_checkin}, #{p_checkout}, #{p_price}, default, default)
+	</insert>
+	
+</mapper>
