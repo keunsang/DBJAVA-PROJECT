@@ -41,15 +41,15 @@
 		value="true" /> </beans:bean> -->
 
 	<!-- 로그를 출력하기 위해서 DriverSpy이용해서 jdbc설정: Connerction이 1개존재 -->
-<!-- 	<beans:bean id="dataSource"
+	<beans:bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<beans:property name="driverClassName"
 			value="net.sf.log4jdbc.DriverSpy" />
 		<beans:property name="url"
-			value="jdbc:log4jdbc:oracle:thin:@192.168.0.129:1521:xe" />
+			value="jdbc:log4jdbc:oracle:thin:@106.243.194.226:3000:xe" />
 		<beans:property name="username" value="DBJAVA" />
 		<beans:property name="password" value="1111" />
-	</beans:bean> -->
+	</beans:bean> 
 
 	<!-- sqlSessionFactory :: mybatis가 사용 -->
 <!-- 	<beans:bean id="sqlSessionFactory"
