@@ -11,7 +11,7 @@
 	</appender>
 	
 	<!-- Application Loggers -->
-	<logger name="com.dbjava.www">
+	<logger name="com.zip.dbjava">
 		<level value="info" />
 	</logger>
 	

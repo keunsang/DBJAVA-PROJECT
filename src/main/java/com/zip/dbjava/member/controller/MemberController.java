@@ -1,4 +1,4 @@
-package com.dbjava.member.controller;
+package com.zip.dbjava.member.controller;
 
 import java.text.DateFormat;
 import java.util.Date;

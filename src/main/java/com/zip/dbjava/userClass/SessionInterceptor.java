@@ -1,4 +1,4 @@
-package com.dbjava.userClass;
+package com.zip.dbjava.userClass;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

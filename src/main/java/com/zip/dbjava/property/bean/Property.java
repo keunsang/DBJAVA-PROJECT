@@ -1,4 +1,4 @@
-package com.dbjava.property.bean;
+package com.zip.dbjava.property.bean;
 
 import lombok.Data;
 
