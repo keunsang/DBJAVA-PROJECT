@@ -21,11 +21,11 @@ public class MainController {
 	
 	
 	@RequestMapping(value = "/header", method = RequestMethod.GET)
-	public String header(Locale locale, Model model) {
+	public String home() {
 		
 		
 		
-		return "header";
+		return "main/header";
 	}
 	
 	
