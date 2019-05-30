@@ -1,4 +1,4 @@
-package com.zip.dbjava.main.controller;
+package com.zip.dbjava.property.controller;
 
 import java.text.DateFormat;
 import java.util.Date;
@@ -11,26 +11,15 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.zip.dbjava.member.controller.MemberController;
-
 @Controller
-public class MainController {
-	
-	private static final Logger logger = LoggerFactory.getLogger(MemberController.class);
-	
-	
-	
-	@RequestMapping(value = "/header", method = RequestMethod.GET)
-	public String home() {
-		
-		
-		
-		return "main/header";
-	}
-	
-	
-	
-	
-	
+public class PropertyController {
 
+	private static final Logger logger = LoggerFactory.getLogger(PropertyController.class);
+	
+	@RequestMapping(value = "/addProperty", method = RequestMethod.GET)
+	public String home() {
+
+		
+		return "property/addProperty";
+	}
 }
