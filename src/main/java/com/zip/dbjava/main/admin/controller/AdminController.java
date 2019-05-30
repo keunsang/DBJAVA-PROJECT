@@ -70,7 +70,7 @@ public class AdminController {
 	}
 	@RequestMapping(value = "/adMvPropertyInfoModify")
 	public ModelAndView adMvPropertyInfoModify() {
-		mv = as.adMvPropertyInfoModify()
+		mv = as.adMvPropertyInfoModify();
 		return mv;
 	}
 

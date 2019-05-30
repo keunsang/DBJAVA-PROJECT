@@ -5,9 +5,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.zip.dbjava.admin.bean.Admin;
+import com.zip.dbjava.main.admin.dao.AdMainDao;
 @Service
 public class AdminMain {
-	
+	@Autowired
+	AdMainDao admDao;
 	
 	
 	ModelAndView mv;
@@ -21,6 +23,7 @@ public class AdminMain {
 		mv=new ModelAndView();
 		System.out.println("id="+ad.getA_id());
 		System.out.println("pw="+ad.getA_pw());
+		admDao.adLogin();
 		//아이디세션저장 DAO가서 아이디 비밀번호 확인@@
 		mv.setViewName("admin/adminIndex");
 		return mv;

@@ -26,14 +26,9 @@ public class MainController {
 	
 	
 	@RequestMapping(value = "/header", method = RequestMethod.GET)
-<<<<<<< HEAD
-	public String header() {
-=======
 	public String home() {
 		
 		
-		
->>>>>>> c4c4a99f2099ee7ad1095597457be17a9fb0c994
 		return "main/header";
 	}
 	
