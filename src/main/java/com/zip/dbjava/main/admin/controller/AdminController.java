@@ -18,18 +18,24 @@ public class AdminController {
 	private static final Logger logger = LoggerFactory.getLogger(MemberController.class);
 	@Autowired
 	private AdminMain as;// 게시판 서비스 클래스 (Model)
-	
+
 	ModelAndView mv;
 
 	@RequestMapping(value = "/admin", method = RequestMethod.GET)
 	public ModelAndView adminMvLogin() {
-		mv=as.adMvLogin();
+		mv = as.adMvLogin();
 		return mv;
 	}
 
-	@RequestMapping(value = "/adLogin", method = RequestMethod.GET)
+	@RequestMapping(value = "/adLogin", method = RequestMethod.POST)
 	public ModelAndView adlogin(Admin ad) {
-		mv=as.adLogin(ad);
+		 mv = as.adLogin(ad);
+		return mv;
+	}
+
+	@RequestMapping(value = "/adlogout", method = RequestMethod.POST)
+	public ModelAndView adlogout(Admin ad) {
+		mv = as.adlogout(ad);
 		return mv;
 	}
 }

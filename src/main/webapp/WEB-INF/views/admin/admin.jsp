@@ -22,7 +22,7 @@ div {
 <body>
 	<div id="adminlogindiv">
 		<h1>로고이미지@@@@@@@@@</h1>
-		<form action="adlogin" method="post">
+		<form action="adLogin" method="post">
 			<input type="text" name="a_id" placeholder="아이디 입력" /><br /> <input
 				type="password" name="a_pw" placeholder="비밀번호 임력" /><br />
 			<button id="adminlogin">로그인</button>

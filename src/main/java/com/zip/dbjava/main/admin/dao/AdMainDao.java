@@ -1,5 +1,10 @@
 package com.zip.dbjava.main.admin.dao;
 
-public interface IadminDao {
-
+public interface AdMainDao {
+	
+	
+	
+	
+	
+	
 }

@@ -4,11 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+
 </head>
 <body>
 	<div id="header">
-		<h1>헤드이미지@@@@@@@@@@@</h1>
+		<h1 id="img">헤드이미지@@@@@@@@@@@</h1>
 		<a href="adlogout">로그아웃</a>
 	</div>
 </body>
