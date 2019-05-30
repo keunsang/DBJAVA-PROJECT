@@ -29,13 +29,49 @@ public class AdminController {
 
 	@RequestMapping(value = "/adLogin", method = RequestMethod.POST)
 	public ModelAndView adlogin(Admin ad) {
-		 mv = as.adLogin(ad);
+		mv = as.adLogin(ad);
 		return mv;
 	}
 
-	@RequestMapping(value = "/adlogout", method = RequestMethod.POST)
+	@RequestMapping(value = "/adlogout", method = RequestMethod.GET)
 	public ModelAndView adlogout(Admin ad) {
 		mv = as.adlogout(ad);
 		return mv;
 	}
+
+	@RequestMapping(value = "/adQnA")
+	public ModelAndView adMvQnA() {
+		mv = as.adMvQnA();
+		return mv;
+	}
+
+	@RequestMapping(value = "/adMvReport")
+	public ModelAndView adMvReport() {
+		mv = as.adMvReport();
+		return mv;
+	}
+
+	@RequestMapping(value = "/adMemberModify")
+	public ModelAndView adMvMemberModify() {
+		mv = as.adMvMemberModify();
+		return mv;
+	}
+
+	@RequestMapping(value = "/adRAuctionModify")
+	public ModelAndView pMvRAuction() {
+		mv = as.pMvRAuction();
+		return mv;
+	}
+
+	@RequestMapping(value = "/adPropertyRequestList")
+	public ModelAndView adMvPrtReqList() {
+		mv = as.adMvPrtReqList();
+		return mv;
+	}
+	@RequestMapping(value = "/adMvPropertyInfoModify")
+	public ModelAndView adMvPropertyInfoModify() {
+		mv = as.adMvPropertyInfoModify()
+		return mv;
+	}
+
 }
