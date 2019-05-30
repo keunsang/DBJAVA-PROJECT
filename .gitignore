@@ -5,6 +5,7 @@
 .metadata
 bin/
 tmp/
+target/
 *.tmp
 *.bak
 *.swp
@@ -72,4 +73,3 @@ local.properties
 
 # End of https://www.gitignore.io/api/eclipse
 
-/dbjava/target
