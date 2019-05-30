@@ -4,6 +4,7 @@
 <html>
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 <style>
 	h3 {
 		text-align: center;
@@ -40,9 +41,20 @@
 	
 	#propertyEnroll {
 		padding: 10px;
+		margin-left: 43%;
 		color: white;
 		background-color: red;
 		font-size: 11pt;
+	}
+	
+	#pimage {
+		width: 200px;
+		height: 130px;
+	}
+	
+	#pimagediv {
+		border: 2px dashed red;
+		height: 150px;
 	}
 </style>
 <meta charset="UTF-8">
@@ -103,6 +115,17 @@
 		
 		<h4> 숙소 위치 (필수) </h4>
 		<span> 정확한 숙소 주소는 게스트가 예약을 완료한 후에만 공개됩니다. </span> <br> <br>
+		<div class="form-group">
+			<input class="form-control" style="width: 10%; display: inline;" placeholder="우편번호" name="addr1" id="addr1" type="text" readonly="readonly">
+    		<button type="button" class="btn btn-default" onclick="execPostCode();"><i class="fa fa-search"> </i> 우편번호 찾기</button>                               
+		</div>
+		<div class="form-group">
+  		  	<input class="form-control" style="width: 50%; top: 5px;" placeholder="도로명 주소" name="addr2" id="addr2" type="text" readonly="readonly" />
+		</div>
+		<div class="form-group">
+			<input class="form-control" style="width: 50%;" placeholder="상세주소" name="addr3" id="addr3" type="text">
+		</div> <br>
+		
 		
 		<h4> 편의시설 </h4>
 		<span> 일반적으로 게스트가 기대하는 편의시설 목록입니다.</span> <br> <br>
@@ -138,8 +161,8 @@
 	
 	<div id="addProperty2">
 		<h4> 숙소 사진 올리기 (필수) </h4>
-		<span> 게스트가 사진을 보고 숙소의 느낌을 생생히 떠올려볼 수 있도록 해주세요. </span> <input type="file" id="pfile" name="pfile"> <br>
-		<div id="pimagediv"> <img id="pimage" src="#" width="150" height="150"> </div>
+		<span> 게스트가 사진을 보고 숙소의 느낌을 생생히 떠올려볼 수 있도록 해주세요. </span> <input type="file" id="pfile" name="pfile" multiple> <br>
+		<div id="pimagediv"> </div>
 	
 		<h4> 숙소 설명 </h4>
 		<span> 숙소에 대해 간략히 설명해주세요. 숙소와 주변 지역에 대한 정보에서 시작해 게스트와 어떻게 소통하고 싶은지 등의 내용을 적어주세요. </span> <br> <br>
@@ -225,5 +248,66 @@ $("#backfirst").click(function() {
 	$("#addProperty1").show();
 	$("#addProperty2").hide();
 })
+
+function execPostCode() {
+         new daum.Postcode({
+             oncomplete: function(data) {
+
+                var fullRoadAddr = data.roadAddress;
+                var extraRoadAddr = '';
+ 
+                if(data.bname !== '' && /[동|로|가]$/g.test(data.bname)){
+                    extraRoadAddr += data.bname;
+                }
+
+                if(data.buildingName !== '' && data.apartment === 'Y'){
+                   extraRoadAddr += (extraRoadAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+                }
+
+                if(extraRoadAddr !== ''){
+                    extraRoadAddr = ' (' + extraRoadAddr + ')';
+                }
+
+                if(fullRoadAddr !== ''){
+                    fullRoadAddr += extraRoadAddr;
+                }
+ 
+                console.log(data.zonecode);
+                console.log(fullRoadAddr);
+                
+               
+                $("[name=addr1]").val(data.zonecode);
+                $("[name=addr2]").val(fullRoadAddr);
+                
+            }
+         }).open();
+     }
+
+var sel_files = [];
+
+$(document).ready(function() {
+	$("#pfile").on("change", handleImgsFileSelect);
+});
+
+function handleImgsFileSelect(e) {
+	var files = e.target.files;
+	var filesArr = Array.prototype.slice.call(files);
+	
+	filesArr.forEach(function(f) {
+		if (!f.type.match("image.*")) {
+			alert ("확장자는 이미지 확장자만 가능합니다.");
+			return;
+		}
+		
+		sel_files.push(f);
+		
+		var reader = new FileReader();
+		reader.onload = function(e) {
+			var img_html = "<img id='pimage' src=\""+e.target.result+"\" />";
+			$("#pimagediv").append(img_html);
+		}
+		reader.readAsDataURL(f);
+	});
+}
 </script>
 </html>

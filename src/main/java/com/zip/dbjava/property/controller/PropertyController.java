@@ -1,25 +1,30 @@
 package com.zip.dbjava.property.controller;
 
-import java.text.DateFormat;
-import java.util.Date;
-import java.util.Locale;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.zip.dbjava.property.bean.Property;
+import com.zip.dbjava.property.service.PropertyMM;
 
 @Controller
 public class PropertyController {
 
 	private static final Logger logger = LoggerFactory.getLogger(PropertyController.class);
 	
-	@RequestMapping(value = "/addProperty", method = RequestMethod.GET)
-	public String home() {
-
+	private PropertyMM pmm;
+	ModelAndView mav;
+	
+	@RequestMapping(value = "/propertyEnroll", method = RequestMethod.POST)
+	public ModelAndView propertyEnroll(Property p) {
+		System.out.println("id: "+p.getP_mid());
+		mav = pmm.propertyEnroll(p);
 		
-		return "property/addProperty";
+		mav.setViewName("index");
+		return mav;
 	}
 }
