@@ -41,6 +41,7 @@
 	
 	#propertyEnroll {
 		padding: 10px;
+		margin-left: 43%;
 		color: white;
 		background-color: red;
 		font-size: 11pt;
