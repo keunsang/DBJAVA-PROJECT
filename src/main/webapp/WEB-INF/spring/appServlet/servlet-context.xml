@@ -87,17 +87,17 @@
 		transaction-manager="transactionManager" />
 
 	<!-- Interceptor 설정 -->
-	<interceptors>
+<!-- 	<interceptors>
 		<interceptor>
-			<!-- mapping의 모든 요청은 Controller에 도착하기 전에 가로챈다. -->
+			mapping의 모든 요청은 Controller에 도착하기 전에 가로챈다.
 			<mapping path="/*" />
-			<!-- exclude-mapping의 요청은 가로채지 않는다. -->
+			exclude-mapping의 요청은 가로채지 않는다.
 			<exclude-mapping path="/" />
-			<!-- 인터셉터 객체 생성 -->
+			인터셉터 객체 생성
 			<beans:bean
 				class="com.dbjava.userClass.SessionInterceptor" />
 		</interceptor>
-	</interceptors>
+	</interceptors> -->
 
 	<!-- 파일 업로드 설정 -->
 	<beans:bean id="multipartResolver"
