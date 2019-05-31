@@ -14,8 +14,8 @@ import com.zip.dbjava.member.dao.MemberMyPageMessageDao;
 @Component
 public class MainManagement {
 	
-	
-	private MemberMyPageMessageDao mMsgDao;
+	@Autowired
+	private MemberMyPageMessageDao mMMDao;
 	@Autowired
 	private HttpSession session; 
 
@@ -36,7 +36,7 @@ public class MainManagement {
 			System.out.println("메시지 없음");
 			msgList=null;
 		}
-		msgList=mMsgDao.mMsgNoticDetail(id);
+		msgList=mMMDao.mMsgNoticDetail(id);
 		System.out.println("msgList="+msgList);
 		
 		return msgList;
