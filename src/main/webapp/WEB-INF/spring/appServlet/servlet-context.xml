@@ -49,7 +49,6 @@
 			value="jdbc:log4jdbc:oracle:thin:@106.243.194.226:3000:xe" />
 		<beans:property name="username" value="DBJAVA" />
 		<beans:property name="password" value="1111" />
-		
 	</beans:bean> 
 
 	<!-- sqlSessionFactory :: mybatis가 사용 -->
@@ -76,6 +75,13 @@
 			ref="sqlSessionFactory" />
 		<beans:property name="mapperInterface"
 			value="com.zip.dbjava.member.dao.MemberMyPageMessageDao" />
+	</beans:bean>
+	<beans:bean id="admDao"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<beans:property name="sqlSessionFactory"
+			ref="sqlSessionFactory" />
+		<beans:property name="mapperInterface"
+			value="com.zip.dbjava.main.admin.dao.AdMainDao" />
 	</beans:bean>
 
 

@@ -28,7 +28,8 @@ public class MainController {
 	
 	@RequestMapping(value = "/header", method = RequestMethod.GET)
 
-	public String header() {
+
+	public String header() {		
 
 		return "main/header";
 	}
